@@ -15,7 +15,7 @@
  */
 package it.jaschke.alexandria;
 
-import it.jaschke.alexandria.camera.GraphicOverlay;
+import com.google.android.gms.samples.vision.face.multitracker.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.Tracker;
 

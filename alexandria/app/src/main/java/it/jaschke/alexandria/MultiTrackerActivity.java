@@ -15,7 +15,6 @@
  */
 package it.jaschke.alexandria;
 
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -32,15 +31,15 @@ import android.view.View;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.samples.vision.face.multitracker.ui.camera.CameraSourcePreview;
+import com.google.android.gms.samples.vision.face.multitracker.ui.camera.GraphicOverlay;
 import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.MultiDetector;
 import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+import com.google.android.gms.vision.face.FaceDetector;
 
 import java.io.IOException;
-
-import it.jaschke.alexandria.camera.CameraSourcePreview;
-import it.jaschke.alexandria.camera.GraphicOverlay;
 
 /**
  * Activity for the multi-tracker app.  This app detects faces and barcodes with the rear facing
@@ -64,7 +63,7 @@ public final class MultiTrackerActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
 
         mPreview = (CameraSourcePreview) findViewById(R.id.preview);
         mGraphicOverlay = (GraphicOverlay) findViewById(R.id.faceOverlay);
@@ -127,10 +126,10 @@ public final class MultiTrackerActivity extends AppCompatActivity {
         // is set to receive the face detection results, track the faces, and maintain graphics for
         // each face on screen.  The factory is used by the multi-processor to create a separate
         // tracker instance for each face.
-//        FaceDetector faceDetector = new FaceDetector.Builder(context).build();
-//        FaceTrackerFactory faceFactory = new FaceTrackerFactory(mGraphicOverlay);
-//        faceDetector.setProcessor(
-//                new MultiProcessor.Builder<>(faceFactory).build());
+        FaceDetector faceDetector = new FaceDetector.Builder(context).build();
+        FaceTrackerFactory faceFactory = new FaceTrackerFactory(mGraphicOverlay);
+        faceDetector.setProcessor(
+                new MultiProcessor.Builder<>(faceFactory).build());
 
         // A barcode detector is created to track barcodes.  An associated multi-processor instance
         // is set to receive the barcode detection results, track the barcodes, and maintain
@@ -147,7 +146,7 @@ public final class MultiTrackerActivity extends AppCompatActivity {
         // are then sent to associated tracker instances which maintain per-item graphics on the
         // screen.
         MultiDetector multiDetector = new MultiDetector.Builder()
-               // .add(faceDetector)
+                .add(faceDetector)
                 .add(barcodeDetector)
                 .build();
 
