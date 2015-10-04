@@ -196,6 +196,12 @@ public class BookService extends IntentService {
 
         } catch (JSONException e) {
             Log.e(LOG_TAG, "Error ", e);
+        } catch (NullPointerException e){
+            //We get here when there is no Internet
+            Intent NoInternet = new Intent(MainActivity.MESSAGE_EVENT);
+            NoInternet.putExtra(MainActivity.MESSAGE_KEY,
+                    getResources().getString(R.string.no_network));
+            LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(NoInternet);
         }
     }
 
