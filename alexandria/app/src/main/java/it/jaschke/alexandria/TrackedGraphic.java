@@ -15,7 +15,7 @@
  */
 package it.jaschke.alexandria;
 
-import it.jaschke.alexandria.camera.GraphicOverlay;
+import com.google.android.gms.samples.vision.face.multitracker.ui.camera.GraphicOverlay;
 
 /**
  * Common base class for defining graphics for a particular item type.  This along with
