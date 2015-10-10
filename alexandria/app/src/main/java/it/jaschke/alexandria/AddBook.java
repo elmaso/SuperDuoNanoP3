@@ -91,11 +91,7 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
         rootView.findViewById(R.id.scan_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< HEAD
-                // Start barcode
-                   Intent intent = new Intent(getActivity(), BarcodeActivity.class);
-                  startActivity(intent);
-=======
+
                 // This is the callback method that the system will invoke when your button is
                 // clicked. You might do this by launching another app or by including the
                 //functionality directly in this app.
@@ -109,7 +105,6 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
                 // WE START THE BARCODE
                 getActivity().startActivityForResult(intent, REQUEST_BARCODE);
 
->>>>>>> Alexandria
             }
         });
 
