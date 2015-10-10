@@ -24,21 +24,30 @@ import com.google.android.gms.vision.MultiProcessor;
 import com.google.android.gms.vision.Tracker;
 import com.google.android.gms.vision.barcode.Barcode;
 
+<<<<<<< HEAD
+=======
+import it.jaschke.alexandria.camera.GraphicOverlay;
+
+
+
+>>>>>>> Alexandria
 /**
  * Factory for creating a tracker and associated graphic to be associated with a new barcode.  The
  * multi-processor uses this factory to create barcode trackers as needed -- one for each barcode.
  */
 class BarcodeTrackerFactory implements MultiProcessor.Factory<Barcode> {
     private GraphicOverlay mGraphicOverlay;
+    private GraphicTracker.Callback mCallback;
 
-    BarcodeTrackerFactory(GraphicOverlay graphicOverlay) {
+    BarcodeTrackerFactory(GraphicOverlay graphicOverlay, GraphicTracker.Callback callback) {
         mGraphicOverlay = graphicOverlay;
+        mCallback = callback;
     }
 
     @Override
     public Tracker<Barcode> create(Barcode barcode) {
         BarcodeGraphic graphic = new BarcodeGraphic(mGraphicOverlay);
-        return new GraphicTracker<>(mGraphicOverlay, graphic);
+        return new GraphicTracker<>(mGraphicOverlay, graphic,mCallback);
     }
 }
 
