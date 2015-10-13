@@ -39,8 +39,10 @@ public class myFetchService extends IntentService
     @Override
     protected void onHandleIntent(Intent intent)
     {
-        getData("n2");
-        getData("p2");
+        //// TODO: 10/12/15  Make this a configurable setting
+        //Change the parameter to 9 so I could get data back
+        getData("n9");
+        getData("p9");
 
         return;
     }
