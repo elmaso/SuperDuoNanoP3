@@ -1,11 +1,14 @@
 package barqsoft.footballscores.service;
 
 import android.app.IntentService;
+import android.appwidget.AppWidgetManager;
+import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
+import android.widget.RemoteViews;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -24,6 +27,8 @@ import java.util.Vector;
 
 import barqsoft.footballscores.DatabaseContract;
 import barqsoft.footballscores.R;
+import barqsoft.footballscores.Utilies;
+import barqsoft.footballscores.widget.FootballScoreWidgetProvider;
 
 /**
  * Created by yehya khaled on 3/2/2015.
@@ -41,8 +46,8 @@ public class myFetchService extends IntentService
     {
         //// TODO: 10/12/15  Make this a configurable setting
         //Change the parameter to 9 so I could get data back
-        getData("n9");
-        getData("p9");
+        getData("n3");
+        getData("p3");
 
         return;
     }
@@ -257,6 +262,27 @@ public class myFetchService extends IntentService
                     //Log.v(LOG_TAG,Away);
                     //Log.v(LOG_TAG,Home_goals);
                     //Log.v(LOG_TAG,Away_goals);
+
+                    AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(this);
+                    int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(this, FootballScoreWidgetProvider.class));
+                    int layoutID = R.layout.football_scores_widget;
+
+                    for (int appWidgetId : appWidgetIds){
+                        RemoteViews views = new RemoteViews(getPackageName(), layoutID);
+
+                        views.setImageViewResource(R.id.home_logo, Utilies.getTeamCrestByTeamName(Home));
+                        views.setTextViewText(R.id.home_name, Home);
+
+                        views.setTextViewText(R.id.score_textview, Utilies.getScores(Integer.parseInt(Home_goals), Integer.parseInt(Away_goals)));
+                        views.setTextViewText(R.id.matchday_textview, mTime);
+
+                        views.setImageViewResource(R.id.away_logo, Utilies.getTeamCrestByTeamName(Away));
+                        views.setTextViewText(R.id.away_name, Away);
+
+                        appWidgetManager.updateAppWidget(appWidgetId, views);
+
+
+                    }
 
                     values.add(match_values);
                 }

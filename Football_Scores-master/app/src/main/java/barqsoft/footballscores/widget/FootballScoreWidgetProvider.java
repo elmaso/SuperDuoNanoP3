@@ -1,9 +1,8 @@
-package barqsoft.footballscores;
+package barqsoft.footballscores.widget;
 
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
-import android.widget.RemoteViews;
 
 
 /**
@@ -25,13 +24,8 @@ public class FootballScoreWidgetProvider extends AppWidgetProvider {
 
 
 
-    static void updateAppWidget (Context context,  AppWidgetManager appWidgetManager, int appWidgetId) {
-        CharSequence widgetText = context.getString(R.string.widget_text);
-        //We build the RemoteViews objects
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.football_scores_widget);
-        views.setTextViewText(R.id.appwidget_text, widgetText);
+    static void updateAppWidget (Context context,  AppWidgetManager appWidgetManager,
+                                 int appWidgetId) {
 
-        // Make the widget update
-        appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 }

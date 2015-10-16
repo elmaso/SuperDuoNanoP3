@@ -65,7 +65,7 @@ public class Utilies
         }
     }
 
-    public static int getTeamCrestByTeamName (String teamname)
+    public static int getTeamCrestByTeamName(String teamname)
     {
         if (teamname==null){return R.drawable.no_icon;}
         switch (teamname)
