@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/mariosoberanis/Desktop/Football_Scores-masterV/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/mariosoberanis/Desktop/Football_Scores-masterV/app/build/intermediates/pre-dexed/debug/classes-c1048c58132007c8cf5f25686c633d148093a97c.jar" />
+    </item>
+    <item
+        jar="/Users/mariosoberanis/AndroidStudioProjects/Udacity_Android_Nanodegree_P3/SuperDuoNanoP3/Football_Scores-masterV/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/mariosoberanis/AndroidStudioProjects/Udacity_Android_Nanodegree_P3/SuperDuoNanoP3/Football_Scores-masterV/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-b14aa8ee562e472b6b5a9776f5556ec20e73fb3b.jar" />
+    </item>
+    <item
+        jar="/Users/mariosoberanis/Desktop/Football_Scores-masterV/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/mariosoberanis/Desktop/Football_Scores-masterV/app/build/intermediates/pre-dexed/debug/classes-2385afeecee87c4fc9df63e04edb70eb7044fe73.jar" />
+    </item>
+    <item
+        jar="/Users/mariosoberanis/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.0/support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="/Users/mariosoberanis/AndroidStudioProjects/Udacity_Android_Nanodegree_P3/SuperDuoNanoP3/Football_Scores-masterV/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.0-3039cd3c432f0d35b5ac1ecf6664104848463835.jar" />
+    </item>
+    <item
+        jar="/Users/mariosoberanis/AndroidStudioProjects/Udacity_Android_Nanodegree_P3/SuperDuoNanoP3/Football_Scores-masterV/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/mariosoberanis/AndroidStudioProjects/Udacity_Android_Nanodegree_P3/SuperDuoNanoP3/Football_Scores-masterV/app/build/intermediates/pre-dexed/debug/classes-86e9cf030cd3ca4bb952c339132af320fa93346b.jar" />
+    </item>
+    <item
+        jar="/Users/mariosoberanis/AndroidStudioProjects/Udacity_Android_Nanodegree_P3/SuperDuoNanoP3/Football_Scores-masterV/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/mariosoberanis/AndroidStudioProjects/Udacity_Android_Nanodegree_P3/SuperDuoNanoP3/Football_Scores-masterV/app/build/intermediates/pre-dexed/debug/classes-bfb74f0566ab82027f11d452faa2aa8eceb515e9.jar" />
+    </item>
+    <item
+        jar="/Users/mariosoberanis/Desktop/Football_Scores-masterV/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/libs/internal_impl-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/mariosoberanis/Desktop/Football_Scores-masterV/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.0-a17a7357c2d503e537f725622183cb9fbd4c0925.jar" />
+    </item>
+
+</items>
