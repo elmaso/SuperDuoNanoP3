@@ -25,6 +25,8 @@
     <string name="back_button">go back</string>
     <string name="share_text">A must read book: </string>
     <string name="no_network">Check your internet connection</string>
+    <string name="no_network2">You shuldn/'t be here we check internet a wile back</string>
+    <string name="no_books">There are no books in your list</string>
 
 
 

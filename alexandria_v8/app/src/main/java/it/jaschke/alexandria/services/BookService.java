@@ -21,8 +21,8 @@ import java.net.URL;
 
 import it.jaschke.alexandria.MainActivity;
 import it.jaschke.alexandria.R;
+import it.jaschke.alexandria.Utility;
 import it.jaschke.alexandria.data.AlexandriaContract;
-
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -69,6 +69,16 @@ public class BookService extends IntentService {
      * parameters.
      */
     private void fetchBook(String ean) {
+
+        if (!Utility.isNetworkAvailable(getApplicationContext())){
+            Intent NoInternet = new Intent(MainActivity.MESSAGE_EVENT);
+            NoInternet.putExtra(MainActivity.MESSAGE_KEY,
+                    getResources().getString(R.string.no_network));
+            LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(NoInternet);
+            return;
+        }
+
+
 
         if (ean.length() != 13) {
             return;
@@ -200,7 +210,7 @@ public class BookService extends IntentService {
             //We get here when there is no Internet
             Intent NoInternet = new Intent(MainActivity.MESSAGE_EVENT);
             NoInternet.putExtra(MainActivity.MESSAGE_KEY,
-                    getResources().getString(R.string.no_network));
+                    getResources().getString(R.string.no_network2));
             LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(NoInternet);
         }
     }
