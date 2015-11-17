@@ -22,6 +22,15 @@ public class FootballScoreWidgetProvider extends AppWidgetProvider {
     }
 
 
+    @Override
+    public void onEnabled(Context context) {
+        // Enter relevant functionality for when the first widget is created
+    }
+
+    @Override
+    public void onDisabled(Context context) {
+        // Enter relevant functionality for when the last widget is disabled
+    }
 
 
     static void updateAppWidget (Context context,  AppWidgetManager appWidgetManager,

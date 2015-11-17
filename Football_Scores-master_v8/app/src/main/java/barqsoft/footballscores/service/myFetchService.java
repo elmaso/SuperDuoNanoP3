@@ -46,8 +46,8 @@ public class myFetchService extends IntentService
     {
         //// TODO: 10/12/15  Make this a configurable setting
         //Change the parameter to 9 so I could get data back
-        getData("n3");
-        getData("p3");
+        getData("n9");
+        getData("p9");
 
         return;
     }
